@@ -310,7 +310,7 @@ Post.getArchive = function(callback) {
 };
 
 //返回所有标签
-Post.getTags = function(callback) {
+Post.getTeachers = function(callback) {
   //打开数据库
   mongodb.open(function (err, db) {
     if (err) {
@@ -323,7 +323,7 @@ Post.getTags = function(callback) {
         return callback(err);
       }
       //distinct 用来找出给定键的所有不同值
-      collection.distinct("tags", function (err, docs) {
+      collection.distinct("teachers", function (err, docs) {
         mongodb.close();
         if (err) {
           return callback(err);

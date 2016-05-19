@@ -174,11 +174,11 @@ module.exports = function(app) {
   app.get('/teachers', function (req, res) {
     Post.getTeachers(function (err, posts) {
       if (err) {
-        req.flash('error', err); 
+        req.flash('error', err);
         return res.redirect('/');
       }
       res.render('teachers', {
-        title: '师资列表',
+        title: '标签',
         posts: posts,
         user: req.session.user,
         success: req.flash('success').toString(),
