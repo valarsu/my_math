@@ -106,6 +106,7 @@ module.exports = function(app) {
       res.redirect('/');//登陆成功后跳转到主页
     });
   });
+
     //发表
   app.get('/post', checkLogin);
   app.get('/post', function (req, res) {
@@ -170,7 +171,7 @@ module.exports = function(app) {
       });
     });
   });
-    //教师列表
+  //教师列表
   app.get('/teachers', function (req, res) {
     Post.getTeachers(function (err, posts) {
       if (err) {
@@ -186,7 +187,7 @@ module.exports = function(app) {
       });
     });
   });
-
+  //教师详情
   app.get('/teachers/:teacher', function (req, res) {
     Post.getTeacher(req.params.tag, function (err, posts) {
       if (err) {
@@ -201,6 +202,42 @@ module.exports = function(app) {
         error: req.flash('error').toString()
       });
     });
+  });
+  //专业概况
+  app.get('/aboutUs', function (req, res) {
+    res.render('aboutUs', {title: '专业概况'});
+  });
+  //新闻列表
+  app.get('/news', function (req, res) {
+    res.render('news', {title: '新闻列表'});
+  });
+  //新闻详情
+  app.get('/news/:id', function (req, res) {
+    res.render('newsDetail', {title: '新闻详情'});
+  });
+  //数学建模列表
+  app.get('/mathModels', function (req, res) {
+    res.render('mathModels', {title: '数学建模列表'});
+  });
+  //数学建模详情
+  app.get('/mathModels/:id', function (req, res) {
+    res.render('mathModelDetail', {title: '数学建模详情'});
+  });
+  //精品课程列表
+  app.get('/courses', function (req, res) {
+    res.render('courses', {title: '精品课程列表'});
+  });
+  //精品课程详情
+  app.get('/courses/:id', function (req, res) {
+    res.render('coursesDetail', {title: '精品课程详情'});
+  });
+  //文件下载列表
+  app.get('/files', function (req, res) {
+    res.render('files', {title: '文件下载列表'});
+  });
+  //文件下载详情
+  app.get('/files/:id', function (req, res) {
+    res.render('fileDetail', {title: '文件下载详情'});
   });
 
   app.get('/links', function (req, res) {

@@ -104,6 +104,9 @@ ul a:hover, ul a:focus {
     -moz-transform: translateY(0px);
     transform: translateY(0px); }
 
+.cl-effect-3 a.active {
+  opacity: 1; }
+
 .logo {
   float: left;
   width: 14%; }
