@@ -205,39 +205,77 @@ module.exports = function(app) {
   });
   //专业概况
   app.get('/aboutUs', function (req, res) {
-    res.render('aboutUs', {title: '专业概况'});
+    res.render('aboutUs', {
+      title: '专业概况',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()
+    });
   });
   //新闻列表
   app.get('/news', function (req, res) {
-    res.render('news', {title: '新闻列表'});
+    res.render('news', {
+      title: '新闻列表',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()});
   });
   //新闻详情
   app.get('/news/:id', function (req, res) {
-    res.render('newsDetail', {title: '新闻详情'});
+    res.render('newsDetail', {
+      title: '新闻详情',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()
+    });
   });
   //数学建模列表
   app.get('/mathModels', function (req, res) {
-    res.render('mathModels', {title: '数学建模列表'});
+    res.render('mathModels', {
+      title: '数学建模列表',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()});
   });
   //数学建模详情
   app.get('/mathModels/:id', function (req, res) {
-    res.render('mathModelDetail', {title: '数学建模详情'});
+    res.render('mathModelDetail', {
+      title: '数学建模详情',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()});
   });
   //精品课程列表
   app.get('/courses', function (req, res) {
-    res.render('courses', {title: '精品课程列表'});
+    res.render('courses', {
+      title: '精品课程列表',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()});
   });
   //精品课程详情
   app.get('/courses/:id', function (req, res) {
-    res.render('coursesDetail', {title: '精品课程详情'});
+    res.render('coursesDetail', {
+      title: '精品课程详情',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()});
   });
   //文件下载列表
   app.get('/files', function (req, res) {
-    res.render('files', {title: '文件下载列表'});
+    res.render('files', {
+      title: '文件下载列表',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()});
   });
   //文件下载详情
   app.get('/files/:id', function (req, res) {
-    res.render('fileDetail', {title: '文件下载详情'});
+    res.render('fileDetail', {
+      title: '文件下载详情',
+      user: req.session.user,
+      success: req.flash('success').toString(),
+      error: req.flash('error').toString()});
   });
 
   app.get('/links', function (req, res) {
