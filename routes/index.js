@@ -5,6 +5,7 @@ var crypto = require('crypto'),
     Comment = require('../models/comment.js');
 
 module.exports = function(app) {
+  //主页
   app.get('/', function (req, res) {
     //判断是否是第一页，并把请求的页数转换成 number 类型
     var page = req.query.p ? parseInt(req.query.p) : 1;
@@ -25,7 +26,7 @@ module.exports = function(app) {
       });
     });
   });
-
+    //注册
   app.get('/reg', checkNotLogin);
   app.get('/reg', function (req, res) {
     res.render('reg', {
@@ -72,7 +73,7 @@ module.exports = function(app) {
       });
     });
   });
-
+    //登录
   app.get('/login', checkNotLogin);
   app.get('/login', function (req, res) {
     res.render('login', {
@@ -105,7 +106,7 @@ module.exports = function(app) {
       res.redirect('/');//登陆成功后跳转到主页
     });
   });
-
+    //发表
   app.get('/post', checkLogin);
   app.get('/post', function (req, res) {
     res.render('post', {
@@ -130,14 +131,14 @@ module.exports = function(app) {
       res.redirect('/');//发表成功跳转到主页
     });
   });
-
+    //退出登录
   app.get('/logout', checkLogin);
   app.get('/logout', function (req, res) {
     req.session.user = null;
     req.flash('success', '登出成功!');
     res.redirect('/');//登出成功后跳转到主页
   });
-
+    //文件上传
   app.get('/upload', checkLogin);
   app.get('/upload', function (req, res) {
     res.render('upload', {
@@ -153,7 +154,7 @@ module.exports = function(app) {
     req.flash('success', '文件上传成功!');
     res.redirect('/upload');
   });
-
+    //存档
   app.get('/archive', function (req, res) {
     Post.getArchive(function (err, posts) {
       if (err) {
@@ -169,15 +170,15 @@ module.exports = function(app) {
       });
     });
   });
-
-  app.get('/tags', function (req, res) {
-    Post.getTags(function (err, posts) {
+    //教师列表
+  app.get('/teachers', function (req, res) {
+    Post.getTeachers(function (err, posts) {
       if (err) {
         req.flash('error', err); 
         return res.redirect('/');
       }
-      res.render('tags', {
-        title: '标签',
+      res.render('teachers', {
+        title: '师资列表',
         posts: posts,
         user: req.session.user,
         success: req.flash('success').toString(),
@@ -186,14 +187,14 @@ module.exports = function(app) {
     });
   });
 
-  app.get('/tags/:tag', function (req, res) {
-    Post.getTag(req.params.tag, function (err, posts) {
+  app.get('/teachers/:teacher', function (req, res) {
+    Post.getTeacher(req.params.tag, function (err, posts) {
       if (err) {
         req.flash('error',err); 
         return res.redirect('/');
       }
-      res.render('tag', {
-        title: 'TAG:' + req.params.tag,
+      res.render('teacher', {
+        title: req.params.tag + '老师',
         posts: posts,
         user: req.session.user,
         success: req.flash('success').toString(),
