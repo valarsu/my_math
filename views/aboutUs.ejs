@@ -1,3 +1,79 @@
 <%- include header %>
-<h1><%= title %></h1>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/about.css">
+    <script type="text/javascript" src="/scripts/map.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=密钥"></script>
+</head>
+<body style="position: relative" data-spy="scroll" data-target="#navbar-example">
+    <div class="main-wrap clearfix" id="navbar-example">
+        <div class="about-left pull-left">
+            <ul>
+                <li class="active"><a href="#section01">专业介绍</a></li>
+                <li><a href="#section02">数据统计</a></li>
+                <li><a href="#section03">联系我们</a></li>
+                <li><a href="#section04">体验反馈</a></li>
+            </ul>
+        </div>
+        <div class="about-right pull-left">
+            <div class="main-container clearfix" id="section01">
+                <h1>信息与计算科学专业介绍</h1>
+                <div class="intro">
+                    <p style="overflow: hidden;margin-bottom: 20px;height: 360px">
+                        <img src="/images/math.jpg" style="display: block" alt="信息与计算科学">
+                    </p>
+                    <p>信息与计算科学系的前身是基础部数学教研室。 2002 年成立理学院后，在原数学教研室的基础上成立信息与计算科学系，并于 2003 年起开始招收本科生。</p>
+                    <p>信息与计算科学系现有专职教师 32 人，专职实验技术人员 1 人。其中，教授 5 人，副教授 1 人，讲师 11 人；博士生导师 2 人，硕士生导师 3 人；博士 3 人，硕士 4 人；承担全校高等数学、线性代数、概率统计等十余门本科生课程和试验设计原理、多元统计分析、微分方程定性理论等十余门硕士博士研究生课程。经过多年的教学和科研工作的锻炼，已经形成一支年龄合理，学术、科研水平较高，富于创造性和团队精神的教师队伍。</p>
+                    <p>在承担全校本科、硕士、博士研究生的近三十门数学课程的教学工作之余，我系积极开展数学教学改革活动，在全省率先大面积开设了数学实验课，为推进学生的科学计算手段，提高学生的计算机辅助计算能力作了大量的工作，在东北地区基础课教学工作会议上，受到与会同行的一致好评；连续六年组织学生参加全国大学生数学建模竞赛，取得国家一等奖一项、国家二等奖七项，省级奖二十余项，在全国同类院校名列全茅，即验证了教师的工作和组织能力，又锻炼了学生的创新能力，取得了良好的效果；近年来，我系编写了“面向二十一世纪教材”两本，农业部“十五规划教材”三本，教育部“十五规划教材”一本；在教学工作中，荣获黑龙江省教学成果一等奖一项，二等奖一项。获得黑龙江省优秀教师称号一人。</p>
+                    <p>本学科近年来承担国家项目 4 项，地方政府项目 7 项，共计 11 项。共获科研费 58.5 万元。并获得以下成果：</p>
+                    <ul>
+                        <li>松嫩——三江平原农业发展潜力、障碍及对策研究，获黑龙江省农业科学技术进步二等奖。</li>
+                        <li>研究报告：黑龙江省粮食增产潜力分析，被省委省政府作为中共黑龙江省委七届四次全委（扩大）会议参阅件下发。</li>
+                        <li>国家“九五”攻关课题：松嫩——三江平原区域农业可持续发展综合研究通　过国家验收并通过鉴定达到国内领先水平，农牧结合生态系统物流模型及应用　达到国际先进水平。</li>
+                        <li>近五年在国内外刊物发表的论文论文 40 余篇，国家出版社出版的论著2部，共主办学术会议2次。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-container clearfix" id="section02">
+
+
+
+
+
+            </div>
+            <div class="main-container clearfix" id="section03">
+                <ul class="clearfix">
+                    <li>
+                        <p><i class="fa fa-phone-square" aria-hidden="true"></i></p>
+                        <p>电话</p>
+                        <p>+86-0451-55190317</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-tag" aria-hidden="true"></i></p>
+                        <p>邮编</p>
+                        <p>150030</p>
+                    </li>
+                    <li>
+                        <p><i class="fa fa-envelope-o" aria-hidden="true"></i></p>
+                        <p>邮箱</p>
+                        <p>myjoya@163.com</p>
+                    </li>
+                </ul>
+                <!--百度地图容器-->
+                <div style="width:780px;height:360px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+            </div>
+            <div class="main-container clearfix" id="section04">
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+
+
 <%- include footer %>

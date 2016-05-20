@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <title><%= title %></title>
   <link href="/stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
   <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" media="all" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,7 +16,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <link rel="stylesheet" href="/stylesheets/flexslider.css" type="text/css" media="screen" />
 </head>
 <body>
-<div class="header">
+<div class="header" style="border-bottom: 1px solid #ccc">
   <div class="header-bottom">
     <div class="container">
       <div class="logo">
@@ -25,12 +26,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <span class="menu"> </span>
         <ul class="cl-effect-3">
           <li class="active"><a title="主页" href="/">主页</a></li>
-          <li><a title="存档" href="/archive">专业概况</a></li>
-          <li><a title="师资列表" href="/teachers">新闻动态</a></li>
+          <li><a title="专业概况" href="/aboutUs">专业概况</a></li>
+          <li><a title="新闻动态" href="/news">新闻动态</a></li>
           <% if (user) { %>
-            <li><a title="上传" href="/upload">数学建模</a></li>
-            <li><a title="发表" href="/post">精品课程</a></li>
-            <li><a title="登出" href="/logout">下载中心</a></li>
+            <li><a title="数学建模" href="/mathModels">数学建模</a></li>
+            <li><a title="精品课程" href="/courses">精品课程</a></li>
+            <li><a title="下载中心" href="/files">下载中心</a></li>
             <li><% user %></li>
           <% } else { %>
             <li><a title="登录" href="/login">登录</a></li>
