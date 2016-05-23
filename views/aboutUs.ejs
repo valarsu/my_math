@@ -3,11 +3,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="/stylesheets/about.css">
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UxnvGtcGbsrVOAuiezdsse7IMZbouhTI"></script>
     <script type="text/javascript" src="/scripts/highcharts/highcharts.js"></script>
     <script type="text/javascript" src="/scripts/highcharts/modules/exporting.js"></script>
     <script type="text/javascript" src="/scripts/highcharts/highcharts-3d.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UxnvGtcGbsrVOAuiezdsse7IMZbouhTI"></script>
+    <style>
+        svg > text:last-child{
+            display: none;
+        }
+
+    </style>
 </head>
 <body style="position: relative" data-spy="scroll" data-target="#navbar-example">
     <div class="main-wrap clearfix" id="navbar-example">
@@ -39,9 +46,13 @@
                 </div>
             </div>
             <div class="main-container clearfix" id="section02">
+                <h1>相关数据统计</h1>
+
                 <div id="container" style="min-width:700px;height:400px"></div>
             </div>
             <div class="main-container clearfix" id="section03">
+                <h1>联系我们</h1>
+
                 <ul class="clearfix">
                     <li>
                         <p><i class="fa fa-phone-square" aria-hidden="true"></i></p>
@@ -69,7 +80,8 @@
 
 
     </div>
-    <!--<script type="text/javascript" src="/scripts/map.js"></script>-->
+    <script type="text/javascript" src="/scripts/map.js"></script>
+
     <script type="text/javascript" src="/scripts/3ds.js"></script>
 
 </body>
@@ -77,3 +89,12 @@
 
 
 <%- include footer %>
+<script>
+    $(function () {
+        console.log($('.BMapLabel'));
+        $('.BMapLabel').css({
+            position: 'relative!important'
+        });
+    });
+
+</script>
