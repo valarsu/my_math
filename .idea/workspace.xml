@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62017c7e-d5ff-48c0-ba72-69caf90a8b79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/scripts/3ds.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/about.css" afterPath="$PROJECT_DIR$/public/stylesheets/about.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/about.css.map" afterPath="$PROJECT_DIR$/public/stylesheets/about.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheets/about.scss" afterPath="$PROJECT_DIR$/public/stylesheets/about.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/aboutUs.ejs" afterPath="$PROJECT_DIR$/views/aboutUs.ejs" />
-    </list>
+    <list default="true" id="62017c7e-d5ff-48c0-ba72-69caf90a8b79" name="Default" comment="" />
     <ignored path="N-blog.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -497,16 +490,16 @@
       <workItem from="1463640567698" duration="8092000" />
       <workItem from="1463663118810" duration="1520000" />
       <workItem from="1463706422263" duration="12097000" />
-      <workItem from="1463750677690" duration="1647000" />
+      <workItem from="1463750677690" duration="1941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44581000" />
+    <option name="totallyTimeSpent" value="44875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="685" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
