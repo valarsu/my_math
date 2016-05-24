@@ -22,7 +22,7 @@ Post.prototype.save = function(callback) {
       day : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate(),
       minute : date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate() + " " + 
       date.getHours() + ":" + (date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes())
-  }
+  };
   //要存入数据库的文档
   var post = {
       name: this.name,

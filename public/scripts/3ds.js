@@ -12,7 +12,7 @@ $(function () {
             }
         },
         title: {
-            text: '信息与计算科学'
+            text: '数学建模优秀学生专业分布'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -30,19 +30,19 @@ $(function () {
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: '所占比重',
             data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
+                ['应用化学',   12.8],
+                ['统计',       15.8],
                 {
-                    name: 'Chrome',
-                    y: 12.8,
+                    name: '信息与计算科学',
+                    y: 20.0,
                     sliced: true,
                     selected: true
                 },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
+                ['农业水利工程',    8.5],
+                ['电气工程',     6.2],
+                ['其他',  36.7]
             ]
         }]
     });

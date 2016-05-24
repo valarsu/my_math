@@ -1,6 +1,4 @@
-/**
- * Created by valarsu on 16-5-20.
- */
+//创建和初始化地图函数：
 function initMap(){
     createMap();//创建地图
     setMapEvent();//设置地图事件
@@ -9,7 +7,7 @@ function initMap(){
 }
 function createMap(){
     map = new BMap.Map("map");
-    map.centerAndZoom(new BMap.Point(126.73158,45.759303),18);
+    map.centerAndZoom(new BMap.Point(126.731589,45.759247),18);
 }
 function setMapEvent(){
     map.enableScrollWheelZoom();
@@ -24,7 +22,7 @@ function addClickHandler(target,window){
 }
 function addMapOverlay(){
     var markers = [
-        {content:"东北农业大学信息与计算科学专业",title:"东北农业大学信息与计算科学专业",imageOffset: {width:0,height:3},position:{lat:45.759164,lng:126.731645}}
+        {content:"东北农业大学-信息与计算科学系",title:"东北农业大学-理学院",imageOffset: {width:0,height:3},position:{lat:45.759203,lng:126.731437}}
     ];
     for(var index = 0; index < markers.length; index++ ){
         var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
@@ -41,15 +39,7 @@ function addMapOverlay(){
         marker.setLabel(label);
         addClickHandler(marker,infoWindow);
         map.addOverlay(marker);
-    };
-    var labels = [
-        {position:{lng:126.731549,lat:45.759112},content:"东北农业大学理学院"}
-    ];
-    for(var index = 0; index < labels.length; index++){
-        var opt = { position: new BMap.Point(labels[index].position.lng,labels[index].position.lat )};
-        var label = new BMap.Label(labels[index].content,opt);
-        map.addOverlay(label);
-    };
+    }
 }
 //向地图添加控件
 function addMapControl(){

@@ -3,16 +3,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="/stylesheets/about.css">
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UxnvGtcGbsrVOAuiezdsse7IMZbouhTI"></script>
     <script type="text/javascript" src="/scripts/highcharts/highcharts.js"></script>
     <script type="text/javascript" src="/scripts/highcharts/modules/exporting.js"></script>
     <script type="text/javascript" src="/scripts/highcharts/highcharts-3d.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=UxnvGtcGbsrVOAuiezdsse7IMZbouhTI"></script>
+    <style>
+        svg > text:last-child{
+            display: none;
+        }
+
+    </style>
 </head>
 <body style="position: relative" data-spy="scroll" data-target="#navbar-example">
     <div class="main-wrap clearfix" id="navbar-example">
         <div class="about-left pull-left">
-            <ul>
+            <ul class="about-menu">
                 <li class="active"><a href="#section01">专业介绍</a></li>
                 <li><a href="#section02">数据统计</a></li>
                 <li><a href="#section03">联系我们</a></li>
@@ -39,9 +46,13 @@
                 </div>
             </div>
             <div class="main-container clearfix" id="section02">
+                <h1>相关数据统计</h1>
+
                 <div id="container" style="min-width:700px;height:400px"></div>
             </div>
             <div class="main-container clearfix" id="section03">
+                <h1>联系我们</h1>
+
                 <ul class="clearfix">
                     <li>
                         <p><i class="fa fa-phone-square" aria-hidden="true"></i></p>
@@ -63,13 +74,19 @@
                 <div style="width:780px;height:360px;border:#ccc solid 1px;font-size:12px" id="map"></div>
             </div>
             <div class="main-container clearfix" id="section04">
-
+                <h1>体验反馈</h1>
+                <h3>问题与建议描述</h3>
+                <textarea name="request-content" placeholder="请输入您发现的问题以及建议，我们会一一查看并进快给您回复~"></textarea>
+                <h3>请留下您的联系方式</h3>
+                <input type="text" placeholder="请留下您的联系方式或者邮箱~">
+                <div class="btn">提交</div>
             </div>
         </div>
 
 
     </div>
-    <!--<script type="text/javascript" src="/scripts/map.js"></script>-->
+    <script type="text/javascript" src="/scripts/map.js"></script>
+
     <script type="text/javascript" src="/scripts/3ds.js"></script>
 
 </body>
@@ -77,3 +94,37 @@
 
 
 <%- include footer %>
+<script>
+    $(function () {
+        console.log($('.BMapLabel'));
+        $('.BMapLabel').css({
+            position: 'relative!important'
+        });
+    });
+
+
+    $(function () {
+        var Func = function () {
+            this.init();
+        };
+
+        Func.prototype.init = function () {
+            var self = this;
+            self.menu();
+        };
+        //反馈
+        Func.prototype.request = function () {
+
+        };
+        //菜单
+        Func.prototype.menu = function () {
+            $('.about-menu').on('click', 'li', function () {
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+        };
+
+
+
+        new Func();
+    })
+</script>
