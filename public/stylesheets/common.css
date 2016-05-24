@@ -1,0 +1,19 @@
+.turn-to-top {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 54px;
+  color: #fff;
+  font-size: 40px;
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.75);
+  transition: background .5s ease;
+  display: none; }
+  .turn-to-top:hover {
+    background: rgba(0, 0, 0, 0.5); }
+
+/*# sourceMappingURL=common.css.map */
