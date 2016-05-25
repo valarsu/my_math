@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62017c7e-d5ff-48c0-ba72-69caf90a8b79" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/post.js" afterPath="$PROJECT_DIR$/models/post.js" />
-    </list>
+    <list default="true" id="62017c7e-d5ff-48c0-ba72-69caf90a8b79" name="Default" comment="" />
     <ignored path="N-blog.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -424,16 +421,16 @@
       <workItem from="1464071558870" duration="136000" />
       <workItem from="1464076066296" duration="49000" />
       <workItem from="1464076122942" duration="9115000" />
-      <workItem from="1464094427257" duration="1043000" />
+      <workItem from="1464094427257" duration="1605000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63847000" />
+    <option name="totallyTimeSpent" value="64409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="685" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24743778" sideWeight="0.49346405" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
