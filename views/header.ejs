@@ -22,9 +22,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <div class="header-bottom">
     <div class="container">
       <div class="logo">
-        <a href="/"><img src="images/logo.png" class="img-responsive" alt=""></a>
+        <a href="/"><img src="/images/logo.png" class="img-responsive" alt=""></a>
       </div>
-      <div class="head-nav">
+      <div class="head-nav" style="width: 68%">
         <span class="menu"> </span>
         <ul class="cl-effect-3">
           <li class="active"><a title="主页" target="_blank" href="/">主页</a></li>
@@ -53,9 +53,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </script>
         <!-- script-for-nav -->
       </div>
-      <div class="header-right">
-        <li><a href="javascript:;"><i class="mail"> </i>myjoya@163.com</a></li>
-      </div>
+      <ul class="header-right" style="width: 15%;position: relative;top: -10px;">
+        <li><a href="javascript:;">您好：您是第 <span style="color: #42E4d8;font-size: 24px" id="vis">41</span>位访客!</a></li>
+        <li style="position: relative;top: -10px;"><a href="javascript:;"><span id="year"></span>年<span id="month"></span>月<span id="date"></span>日 星期<span id="monday"></span></a></li>
+        <script>
+          $(function () {
+            var now = new Date(),
+                mon = {
+                  0: '日',
+                  1: '一',
+                  2: '二',
+                  3: '三',
+                  4: '四',
+                  5: '五',
+                  6: '六'
+                };
+            $('#monday').html(mon[now.getDay()]);
+            $('#date').html(now.getDate());
+            $('#year').html(now.getFullYear());
+            $('#month').html((now.getMonth() + 1));
+          });
+        </script>
+      </ul>
       <div class="clearfix"> </div>
     </div>
   </div>

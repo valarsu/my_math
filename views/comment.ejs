@@ -7,16 +7,16 @@
   </div>
 <% }) %>
 
-<form method="post">
+<form method="post" id="post_comment">
 <% if (user) { %>
-  姓名：<input type="text" name="name" value="<%= user.name %>" /><br />
-  邮箱：<input type="text" name="email" value="<%= user.email %>" /><br />
-  网址：<input type="text" name="website" value="/u/<%= user.name %>" /><br />
+  <h3>姓名</h3><input type="text" name="name" value="<%= user.name %>" /><br />
+  <h3>邮箱</h3><input type="text" name="email" value="<%= user.email %>" /><br />
+  <h3>网址</h3><input type="text" name="website" value="/u/<%= user.name %>" /><br />
 <% } else { %>
-  姓名：<input type="text" name="name" /><br />
-  邮箱：<input type="text" name="email" /><br />
-  网址：<input type="text" name="website" value="http://" /><br />
+  <h3>姓名</h3><input type="text" name="name" /><br />
+  <h3>邮箱</h3><input type="text" name="email" /><br />
+  <h3>网址</h3><input type="text" name="website" value="http://" /><br />
 <% } %>
   <textarea name="content" rows="5" cols="80"></textarea><br />
-  <input type="submit" value="留言" />
+  <input class="btn" type="submit" value="留言" />
 </form>

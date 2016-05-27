@@ -3,38 +3,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/about.css">
+
 </head>
 <body>
 <div class="main-wrap">
     <% posts.forEach(function (post, index) { %>
-        <p><h2><a href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
-        <a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a></p>
-        <p class="info">
-            作者：<a href="/u/<%= post.name %>"><%= post.name %></a> |
-            日期：<%= post.time.minute %> |
-            标签：
-            <% post.tags.forEach(function (tag, index) { %>
-            <% if (tag) { %>
-            <a class="tag" href="/tags/<%= tag %>"><%= tag %></a>
-            <% } %>
-            <% }) %>
-            <% if (post.reprint_info.reprint_from) { %>
-            <br><a href="/u/<%= post.reprint_info.reprint_from.name %>/<%= post.reprint_info.reprint_from.day %>/<%= post.reprint_info.reprint_from.title %>">原文链接</a>
-            <% } %>
-        </p>
-        <p><%- post.post %></p>
-        <p class="info">
-            阅读：<%= post.pv %> |
-            评论：<%= post.comments.length %> |
-            转载：
-            <% if (post.reprint_info.reprint_to) { %>
-            <%= post.reprint_info.reprint_to.length %>
-            <% } else { %>
-            <%= 0 %>
-            <% } %>
-        </p>
+        <div class="news-box clearfix">
+            <div class="news-left pull-left">
+                <p><h2><a class="news-del" target="_blank" href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>"><%= post.title %></a></h2>
+                <div class="info">
+                    <!--作者：<a href="/u/<%= post.name %>"><%= post.name %></a> |-->
+                    <!--标签：-->
+                    <!--<% post.tags.forEach(function (tag, index) { %>-->
+                    <!--<% if (tag) { %>-->
+                    <!--<a class="tag" href="/tags/<%= tag %>"><%= tag %></a>-->
+                    <!--<% } %>-->
+                    <!--<% }) %>-->
+                    <% if (post.reprint_info.reprint_from) { %>
+                    <br><a href="javascript:;">原文链接</a>
+                    <% } %>
+                </div>
+                <div class="news-content"><%- post.post %></div>
+                <div class="info">
+                    阅读：<%= post.pv %> |
+                    评论：<%= post.comments.length %> |
+                    转载：
+                    <% if (post.reprint_info.reprint_to) { %>
+                    <%= post.reprint_info.reprint_to.length %>
+                    <% } else { %>
+                    <%= 0 %>
+                    <% } %>
+                </div>
+                <div class="news-date"><%= post.time.minute %></div>
+            </div>
+            <div class="news-right pull-left">
+                <a href="/u/<%= post.name %>"><img src="<%= post.head %>" class="r_head" /></a></p>
+            </div>
+        </div>
     <% }) %>
     <%- include paging %>
+    <script>
+        $(function () {
+            $('.news-box').on('click', function () {
+               window.open($(this).find('.news-del').attr('href'));
+            });
+        });
+    </script>
 </div>
 </body>
 </html>

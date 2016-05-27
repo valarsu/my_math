@@ -72,7 +72,7 @@
       color: $main-blue;
     }
   }
-  #section04,#post_section{
+  #section04,#post_section,#post_comment{
     margin-bottom: 20px;
     h3{
       text-align: center;
@@ -104,6 +104,79 @@
         background: $main-blue;
         color: #fff;
       }
+    }
+  }
+  .news-box{
+    padding: 20px;
+    margin: 10px 80px;
+    box-shadow: 1px 3px 3px 1px #efefef;
+    cursor: pointer;
+    transition: background 1s ease;
+    position: relative;
+    &:hover{
+      background: rgba(239, 239, 239, 0.26);
+    }
+  }
+  .news-left{
+    width: 70%;
+    padding-right: 22px;
+    .info{
+      font-size: 16px;
+      padding: 10px 0;
+    }
+  }
+  .news-right{
+    width: 30%;
+    a{
+      display: block;
+      color: #337ab7;
+    }
+    img{
+      width: 240px;
+      height: 135px;
+    }
+  }
+  .news-content{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-size: 24px;
+    color: #666;
+  }
+  .news-contents{
+    font-size: 24px;
+    color: #666;
+  }
+  .news-date{
+    font-size: 16px;
+    color: $main-blue;
+  }
+  .post-title{
+    text-align: center;
+    color: $main-blue;
+  }
+}
+.prepage,.nextpage{
+  display: block;
+  padding: 10px;
+  width: 42px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  float: right;
+  background: #fff;
+  transition: background .5s ease;
+  box-shadow: 1px 1px 1px 1px #efefef;
+  a{
+    color: $main-blue;
+  }
+  &:hover{
+    background: $main-blue;
+    a{
+      color: #fff;
     }
   }
 }
