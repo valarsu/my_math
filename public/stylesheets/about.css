@@ -2112,12 +2112,12 @@ div.register-bottom-grid {
   display: block;
   font-size: 36px;
   color: #42E4d8; }
-.main-wrap #section04 {
+.main-wrap #section04, .main-wrap #post_section {
   margin-bottom: 20px; }
-  .main-wrap #section04 h3 {
+  .main-wrap #section04 h3, .main-wrap #post_section h3 {
     text-align: center;
     margin: 10px; }
-  .main-wrap #section04 textarea, .main-wrap #section04 input {
+  .main-wrap #section04 textarea, .main-wrap #section04 input, .main-wrap #post_section textarea, .main-wrap #post_section input {
     display: block;
     outline: none;
     border: 2px solid #999;
@@ -2125,9 +2125,9 @@ div.register-bottom-grid {
     resize: none;
     width: 80%;
     margin: 0 auto; }
-  .main-wrap #section04 textarea {
+  .main-wrap #section04 textarea, .main-wrap #post_section textarea {
     height: 200px; }
-  .main-wrap #section04 .btn {
+  .main-wrap #section04 .btn, .main-wrap #post_section .btn {
     display: block;
     width: 200px;
     margin: 20px auto;
@@ -2137,7 +2137,7 @@ div.register-bottom-grid {
     padding: 6px 40px;
     font-size: 24px;
     transition: background 0.5s ease; }
-    .main-wrap #section04 .btn:hover {
+    .main-wrap #section04 .btn:hover, .main-wrap #post_section .btn:hover {
       background: #42E4d8;
       color: #fff; }
 
